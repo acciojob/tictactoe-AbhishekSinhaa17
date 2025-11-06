@@ -1,4 +1,3 @@
->
 (function () {
   const submitBtn = document.getElementById("submit");
   const entryDiv = document.getElementById("entry");
