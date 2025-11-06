@@ -9,41 +9,42 @@
 <body>
 	<!-- the entire body must be written by student -->
 	<div class="container">
-    <h2>tic tac toe</h2>
+  <h2>tic tac toe</h2>
 
-    <div class="player-form" id="entry">
-      <label for="player-1">Player 1 (X)</label>
-      <input id="player-1" type="text" placeholder="Enter player 1 name" />
+  <!-- initial form -->
+  <div class="player-form" id="entry">
+    <label for="player1">Player 1 (X)</label>
+    <input id="player1" type="text" placeholder="Enter player1 name" />
 
-      <label for="player-2">Player 2 (O)</label>
-      <input id="player-2" type="text" placeholder="Enter player 2 name" />
+    <label for="player2">Player 2 (O)</label>
+    <input id="player2" type="text" placeholder="Enter player2 name" />
 
-      <button id="submit">Submit</button>
+    <button id="submit">Submit</button>
+  </div>
+
+  <!-- board view (hidden initially) -->
+  <div class="board-view" id="boardView" aria-hidden="true" style="display:none;">
+    <h1>Tic Tac Toe</h1>
+    <div class="message" id="message"></div>
+
+    <div class="board" id="board">
+      <div class="cell" id="1" data-index="0"></div>
+      <div class="cell" id="2" data-index="1"></div>
+      <div class="cell" id="3" data-index="2"></div>
+      <div class="cell" id="4" data-index="3"></div>
+      <div class="cell" id="5" data-index="4"></div>
+      <div class="cell" id="6" data-index="5"></div>
+      <div class="cell" id="7" data-index="6"></div>
+      <div class="cell" id="8" data-index="7"></div>
+      <div class="cell" id="9" data-index="8"></div>
     </div>
 
-    <div class="board-view" id="boardView" aria-hidden="true">
-      <h1 style="margin:6px 0 8px 0;">Tic Tac Toe</h1>
-      <div class="message" id="message"></div>
-
-      <div class="board" id="board">
-        <!-- 9 cells with ids 1..9 -->
-        <div class="cell" id="1" data-index="0"></div>
-        <div class="cell" id="2" data-index="1"></div>
-        <div class="cell" id="3" data-index="2"></div>
-        <div class="cell" id="4" data-index="3"></div>
-        <div class="cell" id="5" data-index="4"></div>
-        <div class="cell" id="6" data-index="5"></div>
-        <div class="cell" id="7" data-index="6"></div>
-        <div class="cell" id="8" data-index="7"></div>
-        <div class="cell" id="9" data-index="8"></div>
-      </div>
-
-      <div class="ctrls">
-        <button class="btn secondary" id="restartBtn">Restart</button>
-        <button class="btn primary" id="changePlayersBtn">Change Players</button>
-      </div>
+    <div class="ctrls">
+      <button class="btn secondary" id="restartBtn">Restart</button>
+      <button class="btn primary" id="changePlayersBtn">Change Players</button>
     </div>
   </div>
+</div>
 
     <script type="text/javascript" src="./script.js">
 </script>
