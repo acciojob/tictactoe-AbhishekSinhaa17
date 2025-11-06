@@ -1,1 +1,126 @@
 /*  your css code here. If applicable */
+ body {
+      font-family: Arial, Helvetica, sans-serif;
+      background: #f5f7fb;
+      margin: 0;
+      padding: 30px;
+      display: flex;
+      justify-content: center;
+    }
+
+    .container {
+      width: 360px;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+    }
+
+    h2 {
+      text-transform: lowercase;
+      margin: 0 0 12px 0;
+      color: #333;
+    }
+
+    .player-form {
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    label {
+      font-size: 13px;
+      color: #555;
+    }
+
+    input[type="text"] {
+      padding: 8px 10px;
+      border: 1px solid #ccd7ea;
+      border-radius: 6px;
+      font-size: 14px;
+      outline: none;
+    }
+    input[type="text"]:focus {
+      border-color: #7aa9ff;
+      box-shadow: 0 0 6px rgba(122,169,255,0.2);
+    }
+
+    #submit {
+      margin-top: 6px;
+      padding: 10px;
+      background: #0b76ff;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    #submit:disabled {
+      opacity: 0.6;
+      cursor: not-allowed;
+    }
+
+    /* Board view */
+    .board-view {
+      display: none; /* shown after submit */
+      text-align: center;
+    }
+
+    .message {
+      margin: 10px 0 18px 0;
+      font-size: 15px;
+      color: #333;
+      min-height: 22px;
+    }
+
+    .board {
+      width: 300px;
+      height: 300px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(3, 1fr);
+      gap: 6px;
+    }
+
+    .cell {
+      background: #f8fbff;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 48px;
+      font-weight: 700;
+      color: #0b76ff;
+      cursor: pointer;
+      user-select: none;
+      transition: background 0.15s, transform 0.06s;
+      border: 1px solid rgba(11,118,255,0.08);
+    }
+
+    .cell:hover { transform: translateY(-2px); background: #eef6ff; }
+
+    .cell.disabled { cursor: default; opacity: 0.85; }
+
+    .ctrls {
+      margin-top: 14px;
+      display:flex;
+      gap: 10px;
+      justify-content: center;
+    }
+
+    .btn {
+      padding: 8px 12px;
+      border-radius: 6px;
+      border: none;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .btn.secondary {
+      background: #eee;
+      color: #333;
+    }
+    .btn.primary {
+      background: #0b76ff;
+      color: #fff;
+    }
